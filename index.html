@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="ようこそFluffworksのホームページへ！">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Fluffworks</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<section id="main">
+		<a id="to-intro" href="#intro">Fluffworksって誰？</a>
+	</section>
+	<section class="margin-line"></section>
+	<section id="intro">
+		<div id="intro-box">
+			<h1>Introduction</h1>
+			<p>こんにちは！Fluffworksです。<br>作曲して、YouTubeやSoundCloudに投稿しています。</p>
+			<p>ジャンルは特にこれというものはないですが、ピアノを10年ほど習っておりましたので、<br>ピアノを好んで曲に取り入れています。</p>
+				<p>今は作曲しかしておりませんが、後々いろんな活動をしていけたらと思っています。<br>
+			よろしくお願いします！</p>
+		</div>
+		<a id="to-where" href="#where">もっと詳しく知りたい？</a>
+	</section>
+	<section class="margin-line"></section>
+	<section id="where">
+		<div id="where-h">
+			<h1>Exploration</h1>
+		</div>
+		<div class="time" id="past">
+			<div class="time-box">
+				<div class="btn">
+					<p class="btn-p">過去を知りたい方はこちら</p>
+					<a class="access" id="hi" href="history.html" onclick="pushman(this)"><i class="fa fa-history"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="time" id="current">
+			<div class="time-box" id="current-box">
+				<div class="btn current-a">
+					<p class="btn-p">曲はこちら</p>
+					<a href="https://soundcloud.com/fluffworks" class="access" id="so" onclick="pushman(this)" target="_blank"><i class="fa fa-soundcloud"></i></a>
+				</div>
+				<div class="btn current-a">
+					<p class="btn-p">曲も含め、動画の視聴はこちら</p>
+						<a href="https://www.youtube.com/channel/UCMQofXulIB8Kk1cQi_3sCqA" class="access" id="yo" onclick="pushman(this)" target="_blank"><i class="fa fa-youtube"></i></a>
+				</div>
+				<div class="btn current-a">
+					<p class="btn-p">僕の近況はこちら</p>
+						<a href="https://twitter.com/fluffworkshere" class="access" id="tw" onclick="pushman(this)" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="time" id="future">
+			<div class="time-box">
+				<div class="btn">
+					<p class="btn-p">未来を知りたい方はこちら</p>
+						<a href="plan.html" class="access" id="fu" onclick="pushman(this)"><i class="fa fa-rocket"></i></a>
+				</div>
+			</div>
+		</div>
+		<a id="to-main" href="#main">戻ろっか？</a>
+	</section>
+	<footer>
+		<p id="foot"> © 2018 Fluffworks</p>
+	</footer>
+	<script>
+		function pushman(btn){
+		btn.addEventListener('click',function(){
+			btn.addEventListener('mousedown',function(){
+				this.className='access pushed';
+			});
+			btn.addEventListener('mouseup',function(){
+				this.className='access';
+			});
+		});
+	}
+
+	$('a[href^=#]').click(function() {
+      var speed = 400;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+	</script>
+</body>
+</html>
