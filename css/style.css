@@ -141,12 +141,21 @@ h1{
 	opacity:1;
 }
 
-.current-a{
+.btns{
 	float:left;
 }
 
 .access.pushed{
 	margin-top:6px;
+}
+
+#ma{
+	background:#dd4b39;
+	box-shadow:0 10px 0 #a5291a;
+}
+
+#ma.pushed{
+	box-shadow:0 4px 0 #a5291a;
 }
 
 #hi{
@@ -241,7 +250,7 @@ footer{
 	}
 
 	#where{
-		height:1800px;
+		height:2050px;
 	}
 
 	#where-h{
@@ -250,9 +259,11 @@ footer{
 
 	.time-box{width:300px;}
 
+	#past{height:500px;}
+
 	#current{height:750px;}
 
-	.current-a{
+	.btns{
 		float:none;
 		height:250px;
 	}
