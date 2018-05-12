@@ -16,10 +16,6 @@ body{
 	margin:0 auto;
 }
 
-@media screen and (max-width:959px){
-	#plan{width:300px;}
-}
-
 h1{
 	padding-top:50px;
 	font-size:40px;
@@ -64,4 +60,10 @@ footer{
 	color:white;
 	line-height:70px;
 	text-align:center;
+}
+
+/*short*/
+
+@media screen and (max-width:959px){
+	#plan{width:90%;}
 }
